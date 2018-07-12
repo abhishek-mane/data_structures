@@ -18,6 +18,10 @@ SinglyLinkedList *create_list() {
     list->length = 0;
 }
 
+Bool is_empty(SinglyLinkedList *list) {
+    return (list->head == NULL ? true : false);
+}
+
 void increment_length(SinglyLinkedList *list) {
     list->length += 1;
 }
@@ -27,15 +31,32 @@ void decrement_length(SinglyLinkedList *list) {
 }
 
 void add_node_at_head(SinglyLinkedList *list, int data) {
+
     Node *node = create_node(data);
-    node->next = list->head;
+
+    if (is_empty(list)) {
+        list->tail = node;
+    } else {
+        node->next = list->head;
+    }
+
     list->head = node;
+
     increment_length(list);
 }
 
 void add_node_at_tail(SinglyLinkedList *list, int data) {
+
     Node *node = create_node(data);
-    list->tail->next = node;
+
+    if (is_empty(list)) {
+        list->head = node;
+    } else {
+        list->tail->next = node;
+    }
+
+    list->tail = node;
+
     increment_length(list);
 }
 
