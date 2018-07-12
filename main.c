@@ -1,7 +1,7 @@
-#include <stdio.h>
-#include "ds/linkedlist/singly_linked_list.c"
+
+#include "ds/linkedlist/headers/singly_linked_list.h"
 
 int main() {
-    printf("Hello, World!\n");
+    display();
     return 0;
 }
