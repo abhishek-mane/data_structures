@@ -1,0 +1,9 @@
+//
+// Created by abhishek on 12/7/18.
+//
+
+#ifndef DATA_STRUCTURES_SINGLY_CIRCULAR_H
+#define DATA_STRUCTURES_SINGLY_CIRCULAR_H
+
+
+#endif //DATA_STRUCTURES_SINGLY_CIRCULAR_H
