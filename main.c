@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include "ds/linkedlist/headers/singly_linked_list.h"
+#include "ds/linkedlist/headers/doubly_list.h"
+#include "lib/utils.h"
 
 void display(Array *arr) {
     printf("List => ");
@@ -10,12 +11,14 @@ void display(Array *arr) {
 
 int main() {
 
-    SinglyLinkedList *l = create_list();
+    DoublyLinkedList *list = create_list();
 
-    add_node_at_head(l, 5);
-    add_node_at_head(l, 6);
-    add_node_at_head(l, 7);
-    add_node_at_head(l, 3);
-    display(get_array(l));
+    insert_at_index(list, 1, 0);
+    insert_at_index(list, 2, 1);
+    insert_at_index(list, 3, 2);
+
+    display(list);
+
+
     return 0;
 }

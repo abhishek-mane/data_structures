@@ -10,6 +10,15 @@ typedef enum _bool {
     true = 1
 } Bool;
 
+typedef enum _direction {
+    left = 0,
+    right = 1,
+    head = 2,
+    tail = 4,
+    up = 5,
+    down = 6
+} Direction;
+
 typedef struct _array {
     int *ptr;
     int length;

@@ -3,7 +3,7 @@
 //
 
 #include <stdlib.h>
-#include "../headers/singly_linked_list.h"
+#include "../headers/singly.h"
 
 Node *create_node(int data) {
     Node *node = malloc(sizeof(Node));

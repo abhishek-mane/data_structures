@@ -2,8 +2,8 @@
 // Created by abhishek on 11/7/18.
 //
 
-#ifndef DATA_STRUCTURES_SINGLY_LINKED_LIST_C_H
-#define DATA_STRUCTURES_SINGLY_LINKED_LIST_C_H
+#ifndef DATA_STRUCTURES_SINGLY__H
+#define DATA_STRUCTURES_SINGLY__H
 
 #include <stdio.h>
 #include "../../../lib/utils.h"
