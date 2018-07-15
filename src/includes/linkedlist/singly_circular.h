@@ -1,25 +1,35 @@
-//
-// Created by abhishek on 12/7/18.
-//
+/*
+ * singly_circular.h
+ *
+ * Created on: 15-Jul-2018
+ * Author: Abhishek Mane <https://abhishek-mane.github.io>
+ *
+ */
 
-#ifndef DATA_STRUCTURES_SINGLY_CIRCULAR_H
-#define DATA_STRUCTURES_SINGLY_CIRCULAR_H
+#ifndef INCLUDES_LINKEDLIST_SINGLY_CIRCULAR_H_
+#define INCLUDES_LINKEDLIST_SINGLY_CIRCULAR_H_
 
 #include <stdio.h>
+#include <utils.h>
 
 typedef struct _node {
 	int data;
 	struct _node *next;
 } Node;
 
-typedef struct _linked_list {
+typedef struct _singly_circular_linked_list {
+
 	Node *head;
 	Node *tail;
 	int length;
+
+	Node* (*create_node)(int);
+	void (*insert_node)(struct _singly_circular_linked_list *, int);
+	Array* (*get_array)(struct _singly_circular_linked_list *);
+
 } SinglyCircularLinkedList;
 
-SinglyCircularLinkedList *create_list();
+// Creates & returns the singly linked list
+SinglyCircularLinkedList *create_singly_circular_ll();
 
-void add_node(SinglyCircularLinkedList *, int);
-
-#endif //DATA_STRUCTURES_SINGLY_CIRCULAR_H
+#endif /* INCLUDES_LINKEDLIST_SINGLY_CIRCULAR_H_ */

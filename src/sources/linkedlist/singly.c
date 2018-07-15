@@ -9,14 +9,14 @@
 #include <utils.h>
 #include <linkedlist/singly.h>
 
-Node *create_node(int data) {
+Node *create_singly_ll_node(int data) {
 	Node *node = malloc(sizeof(Node));
 	node->data = data;
 	node->next = NULL;
 	return node;
 }
 
-SinglyLinkedList *create_list() {
+SinglyLinkedList *create_singly_ll() {
 	SinglyLinkedList *list = malloc(sizeof(SinglyLinkedList));
 	list->head = NULL;
 	list->length = 0;
@@ -27,17 +27,9 @@ Bool is_empty(SinglyLinkedList *list) {
 	return (list->head == NULL ? True : False);
 }
 
-void increment_length(SinglyLinkedList *list) {
-	list->length += 1;
-}
+void singly_ll_insert_node_at_head(SinglyLinkedList *list, int data) {
 
-void decrement_length(SinglyLinkedList *list) {
-	list->length -= 1;
-}
-
-void add_node_at_head(SinglyLinkedList *list, int data) {
-
-	Node *node = create_node(data);
+	Node *node = create_singly_ll_node(data);
 
 	if (is_empty(list)) {
 		list->tail = node;
@@ -47,12 +39,12 @@ void add_node_at_head(SinglyLinkedList *list, int data) {
 
 	list->head = node;
 
-	increment_length(list);
+	list->length += 1;
 }
 
-void add_node_at_tail(SinglyLinkedList *list, int data) {
+void singly_ll_insert_node_at_tail(SinglyLinkedList *list, int data) {
 
-	Node *node = create_node(data);
+	Node *node = create_singly_ll_node(data);
 
 	if (is_empty(list)) {
 		list->head = node;
@@ -62,18 +54,14 @@ void add_node_at_tail(SinglyLinkedList *list, int data) {
 
 	list->tail = node;
 
-	increment_length(list);
+	list->length += 1;
 }
 
-void add_node_after(SinglyLinkedList *list, int data) {
-
+void singly_ll_insert_node(SinglyLinkedList *list, int data) {
+	singly_ll_insert_node_at_tail(list, data);
 }
 
-void add_node(SinglyLinkedList *list, int data) {
-	add_node_at_tail(list, data);
-}
-
-Array *get_array(SinglyLinkedList *list) {
+Array *singly_ll_get_array(SinglyLinkedList *list) {
 
 	Array *arr = malloc(sizeof(Array));
 	arr->ptr = calloc(sizeof(int), (size_t) list->length);

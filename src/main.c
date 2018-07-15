@@ -1,14 +1,14 @@
 /*
  * main.c
  *
- *  Created on: 15-Jul-2018
- *  Author: Abhishek Mane <https://abhishek-mane.github.io>
+ * Created on: 15-Jul-2018
+ * Author: Abhishek Mane <https://abhishek-mane.github.io>
+ *
  */
 
 #include <stdio.h>
-
-#include "includes/linkedlist/singly.h"
-#include "includes/utils.h"
+#include <utils.h>
+#include <linkedlist/singly_circular.h>
 
 void display(Array *arr) {
 	printf("List => ");
@@ -19,14 +19,15 @@ void display(Array *arr) {
 
 int main() {
 
-	SinglyLinkedList * list = create_list();
+	SinglyCircularLinkedList *list = create_singly_circular_ll();
 
-	add_node(list, 34);
-	add_node(list, 34);
-	add_node(list, 34);
-	add_node(list, 34);
+	list->insert_node(list, 12);
+	list->insert_node(list, 23);
+	list->insert_node(list, 34);
+	list->insert_node(list, 45);
+	list->insert_node(list, 56);
 
-	display(get_array(list));
+	display(list->get_array(list));
 
 	return 0;
 }

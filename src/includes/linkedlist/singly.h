@@ -1,8 +1,9 @@
 /*
  * singly.h
  *
- *  Created on: 15-Jul-2018
- *  Author: Abhishek Mane <https://abhishek-mane.github.io>
+ * Created on: 15-Jul-2018
+ * Author: Abhishek Mane <https://abhishek-mane.github.io>
+ *
  */
 
 #ifndef LIB_HEADERS_LINKEDLIST_SINGLY_H_
@@ -22,22 +23,16 @@ typedef struct _linked_list {
 	int length;
 } SinglyLinkedList;
 
-Node *create_node(int data);
+Node *create_singly_ll_node(int data);
 
-SinglyLinkedList *create_list();
+SinglyLinkedList *create_singly_ll();
 
-void increment_length(SinglyLinkedList *);
+void singly_ll_insert_node_at_head(SinglyLinkedList *, int);
 
-void decrement_length(SinglyLinkedList *);
+void singly_ll_insert_node_at_tail(SinglyLinkedList *, int);
 
-void add_node_at_head(SinglyLinkedList *, int);
+void singly_ll_insert_node(SinglyLinkedList *, int);
 
-void add_node_at_tail(SinglyLinkedList *, int);
-
-void add_node_after(SinglyLinkedList *, int);
-
-void add_node(SinglyLinkedList *, int);
-
-Array *get_array(SinglyLinkedList *);
+Array *singly_ll_get_array(SinglyLinkedList *);
 
 #endif /* LIB_HEADERS_LINKEDLIST_SINGLY_H_ */

@@ -10,7 +10,7 @@
 #include <utils.h>
 #include <linkedlist/doubly.h>
 
-DoublyLinkedList *create_list() {
+DoublyLinkedList *create_doubly_ll() {
 	DoublyLinkedList *list = malloc(sizeof(DoublyLinkedList));
 	list->head = NULL;
 	list->tail = NULL;
@@ -18,7 +18,7 @@ DoublyLinkedList *create_list() {
 	return list;
 }
 
-Node *create_node(int data) {
+Node *create_doubly_ll_node(int data) {
 	Node *node = malloc(sizeof(Node));
 	node->data = data;
 	node->next = NULL;
@@ -28,7 +28,7 @@ Node *create_node(int data) {
 
 Bool insert_at_index(DoublyLinkedList *list, int data, int index) {
 
-	Node *node = create_node(data);
+	Node *node = create_doubly_ll_node(data);
 
 	if (index > list->length)
 		return False;
@@ -51,7 +51,7 @@ Bool insert_at_index(DoublyLinkedList *list, int data, int index) {
 	return True;
 }
 
-Array *get_array(DoublyLinkedList *list) {
+Array *doubly_ll_get_array(DoublyLinkedList *list) {
 
 	Array *arr = malloc(sizeof(Array));
 	arr->ptr = calloc(sizeof(int), (size_t) list->length);

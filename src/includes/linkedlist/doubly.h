@@ -23,6 +23,12 @@ typedef struct _linked_list {
 	int length;
 } DoublyLinkedList;
 
-DoublyLinkedList *create_list();
+Node *create_doubly_ll_node(int data);
+
+DoublyLinkedList *create_doubly_ll();
+
+Array *doubly_ll_get_array(DoublyLinkedList *);
+
+Bool doubly_ll_insert_at_index(DoublyLinkedList *, int, int);
 
 #endif /* INCLUDES_LINKEDLIST_DOUBLY_H_ */
