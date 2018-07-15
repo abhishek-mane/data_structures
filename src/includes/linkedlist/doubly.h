@@ -1,12 +1,15 @@
-//
-// Created by abhishek on 13/7/18.
-//
+/*
+ * doubly.h
+ *
+ *  Created on: 15-Jul-2018
+ *  Author: Abhishek Mane <https://abhishek-mane.github.io>
+ */
 
-#ifndef DATA_STRUCTURES_DOUBLY_LIST_H
-#define DATA_STRUCTURES_DOUBLY_LIST_H
+#ifndef INCLUDES_LINKEDLIST_DOUBLY_H_
+#define INCLUDES_LINKEDLIST_DOUBLY_H_
 
 #include <stdio.h>
-#include "lib/utils.h"
+#include <utils.h>
 
 typedef struct _node {
 	int data;
@@ -22,8 +25,4 @@ typedef struct _linked_list {
 
 DoublyLinkedList *create_list();
 
-Node *create_node(int);
-
-Bool insert_at_index(DoublyLinkedList *, int, int);
-
-#endif //DATA_STRUCTURES_DOUBLY_LIST_H
+#endif /* INCLUDES_LINKEDLIST_DOUBLY_H_ */

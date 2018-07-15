@@ -7,8 +7,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "lib/headers/linkedlist/doubly.h"
-#include "lib/utils.h"
+#include <utils.h>
+#include <linkedlist/doubly.h>
 
 DoublyLinkedList *create_list() {
 	DoublyLinkedList *list = malloc(sizeof(DoublyLinkedList));
@@ -59,7 +59,7 @@ Array *get_array(DoublyLinkedList *list) {
 
 	int i = 0;
 	Node *p = list->head;
-	while (p != NULL ) {
+	while (p != NULL) {
 		(arr->ptr)[i++] = p->data;
 		p = p->next;
 	}

@@ -6,7 +6,8 @@
  */
 
 #include <stdlib.h>
-#include "lib/headers/linkedlist/singly.h"
+#include <utils.h>
+#include <linkedlist/singly.h>
 
 Node *create_node(int data) {
 	Node *node = malloc(sizeof(Node));

@@ -5,8 +5,9 @@
  *  Author: Abhishek Mane <https://abhishek-mane.github.io>
  */
 
-#include "lib/headers/linkedlist/singly_circular.h"
+#include <linkedlist/singly_circular.h>
 
 SinglyCircularLinkedList *create() {
-
+	SinglyCircularLinkedList *list;
+	return list;
 }

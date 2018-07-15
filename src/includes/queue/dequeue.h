@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 
-#include "../linkedlist/doubly.h"
+#include "../../includes/linkedlist/doubly.h"
 
 typedef struct _dequeue {
 	DoublyLinkedList *queue;

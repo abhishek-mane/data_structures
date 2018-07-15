@@ -7,18 +7,26 @@
 
 #include <stdio.h>
 
-//void display(Array *arr) {
-//	printf("List => ");
-//	for (int i = 0; i < arr->length; ++i) {
-//		printf("%d, ", arr->ptr[i]);
-//	}
-//}
+#include "includes/linkedlist/singly.h"
+#include "includes/utils.h"
+
+void display(Array *arr) {
+	printf("List => ");
+	for (int i = 0; i < arr->length; ++i) {
+		printf("%d, ", arr->ptr[i]);
+	}
+}
 
 int main() {
 
-	printf("Hello World");
-	printf("Hello World 2");
-	printf("Hello World 3");
+	SinglyLinkedList * list = create_list();
+
+	add_node(list, 34);
+	add_node(list, 34);
+	add_node(list, 34);
+	add_node(list, 34);
+
+	display(get_array(list));
 
 	return 0;
 }

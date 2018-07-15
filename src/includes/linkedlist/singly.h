@@ -9,7 +9,7 @@
 #define LIB_HEADERS_LINKEDLIST_SINGLY_H_
 
 #include <stdio.h>
-#include "lib/utils.h"
+#include <utils.h>
 
 typedef struct _node {
 	int data;
