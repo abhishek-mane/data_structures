@@ -55,12 +55,12 @@ SinglyCircularLinkedList *create_singly_circular_ll() {
 
 	SinglyCircularLinkedList *list = malloc(sizeof(SinglyCircularLinkedList));
 
-// initialize vars
+	// initialize vars
 	list->head = NULL;
 	list->tail = NULL;
 	list->length = 0;
 
-// initialize methods
+	// initialize methods
 	list->create_node = &create_singly_circular_ll_node;
 	list->insert_node = &singly_circular_ll_insert_node;
 	list->get_array = &singly_circular_ll_get_array;
