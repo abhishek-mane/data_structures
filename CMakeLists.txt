@@ -17,5 +17,4 @@ add_executable(
 	src/sources/linkedlist/singly.c
 	src/sources/linkedlist/doubly.c
 	src/sources/linkedlist/singly_circular.c
-	src/sources/queue/dequeue.c
 )
