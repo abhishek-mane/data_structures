@@ -23,7 +23,7 @@ SinglyLinkedList *create_singly_ll() {
 	return list;
 }
 
-Bool is_empty(SinglyLinkedList *list) {
+Bool singly_ll_is_empty(SinglyLinkedList *list) {
 	return (list->head == NULL ? True : False);
 }
 
@@ -31,7 +31,7 @@ void singly_ll_insert_node_at_head(SinglyLinkedList *list, int data) {
 
 	Node *node = create_singly_ll_node(data);
 
-	if (is_empty(list)) {
+	if (singly_ll_is_empty(list)) {
 		list->tail = node;
 	} else {
 		node->next = list->head;
@@ -46,7 +46,7 @@ void singly_ll_insert_node_at_tail(SinglyLinkedList *list, int data) {
 
 	Node *node = create_singly_ll_node(data);
 
-	if (is_empty(list)) {
+	if (singly_ll_is_empty(list)) {
 		list->head = node;
 	} else {
 		list->tail->next = node;

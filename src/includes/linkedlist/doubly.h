@@ -11,24 +11,26 @@
 #include <stdio.h>
 #include <utils.h>
 
-typedef struct _node {
+typedef struct _doubly_ll_node {
 	int data;
-	struct _node *next;
-	struct _node *prev;
-} Node;
+	struct _doubly_ll_node *next;
+	struct _doubly_ll_node *prev;
+} DoublyLinkedListNode;
 
-typedef struct _linked_list {
-	Node *head;
-	Node *tail;
+typedef struct _doubly_linked_list {
+
+	// ========== vars ==========
+	DoublyLinkedListNode *head;
+	DoublyLinkedListNode *tail;
 	int length;
+
+	// ========== methods ==========
+	DoublyLinkedListNode* (*create_node)(int);
+	Bool (*is_empty)(struct _doubly_linked_list *);
+	void (*insert)(struct _doubly_linked_list *, int);
+	Array* (*get_array)(struct _doubly_linked_list *);
+
 } DoublyLinkedList;
 
-Node *create_doubly_ll_node(int data);
-
-DoublyLinkedList *create_doubly_ll();
-
-Array *doubly_ll_get_array(DoublyLinkedList *);
-
-Bool doubly_ll_insert_at_index(DoublyLinkedList *, int, int);
-
+DoublyLinkedList *create_doubly_linked_list();
 #endif /* INCLUDES_LINKEDLIST_DOUBLY_H_ */
