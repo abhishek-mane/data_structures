@@ -23,6 +23,6 @@ DoublyLinkedList *create_list();
 
 Node *create_node(int);
 
-Bool insert_at_index(DoublyLinkedList *, int, int);
+//Bool insert_at_index(DoublyLinkedList *, int, int);
 
 #endif //DATA_STRUCTURES_DOUBLY_LIST_H

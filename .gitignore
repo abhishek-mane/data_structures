@@ -1,2 +1,8 @@
 cmake-build-debug
 .idea
+/build/
+/data_structures/
+/test/
+/.settings
+.cproject
+.project
