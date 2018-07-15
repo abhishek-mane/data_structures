@@ -142,21 +142,21 @@ void doubly_ll_delete(DoublyLinkedList *list, DoublyLinkedListNode *node) {
 		return;
 	}
 
-	// Search prev of node to be deleted
-	// p will start searching from head
-	// q will start searching from tail
+	/* Search prev of node to be deleted
+	 * p will start searching from head
+	 * q will start searching from tail
+	 */
 	DoublyLinkedListNode *p = list->head, *q = list->tail, *nodes_prev = NULL;
+
 	for (; p != q && p->prev != q; p = p->next, q = q->prev) {
 
-		printf("p => %d", p->data);
-		printf("q => %d", q->data);
-		printf("\n");
-
+		// break if found
 		if (p->next == node) {
 			nodes_prev = p;
 			break;
 		}
 
+		// break if found
 		if (q->prev == node) {
 			nodes_prev = q->prev->prev;
 			break;
