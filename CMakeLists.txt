@@ -13,7 +13,7 @@ add_executable(
 	# Main
 	src/main.c
 	
-	# ============= sources =============
+	# ============= Sources =============
 	src/sources/linkedlist/singly.c
 	src/sources/linkedlist/doubly.c
 	src/sources/linkedlist/singly_circular.c
