@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
+
 project(data_structures C)
+set(SOURCE src/main.c)
 
 set(CMAKE_C_STANDARD 99)
 
@@ -8,10 +10,10 @@ include_directories(src/includes)
 
 add_executable(
 	# Project
-	data_structures
+	${PROJECT_NAME}
 	
 	# Main
-	src/main.c
+	${SOURCE}
 	
 	# ============= Sources =============
 	src/sources/linkedlist/singly.c
