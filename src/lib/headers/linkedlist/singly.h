@@ -1,22 +1,25 @@
-//
-// Created by abhishek on 11/7/18.
-//
+/*
+ * singly.h
+ *
+ *  Created on: 15-Jul-2018
+ *  Author: Abhishek Mane <https://abhishek-mane.github.io>
+ */
 
-#ifndef DATA_STRUCTURES_SINGLY__H
-#define DATA_STRUCTURES_SINGLY__H
+#ifndef LIB_HEADERS_LINKEDLIST_SINGLY_H_
+#define LIB_HEADERS_LINKEDLIST_SINGLY_H_
 
 #include <stdio.h>
-#include "../../../lib/utils.h"
+#include "lib/utils.h"
 
 typedef struct _node {
-    int data;
-    struct _node *next;
+	int data;
+	struct _node *next;
 } Node;
 
 typedef struct _linked_list {
-    Node *head;
-    Node *tail;
-    int length;
+	Node *head;
+	Node *tail;
+	int length;
 } SinglyLinkedList;
 
 Node *create_node(int data);
@@ -37,4 +40,4 @@ void add_node(SinglyLinkedList *, int);
 
 Array *get_array(SinglyLinkedList *);
 
-#endif //DATA_STRUCTURES_SINGLY_LINKED_LIST_C_H
+#endif /* LIB_HEADERS_LINKEDLIST_SINGLY_H_ */

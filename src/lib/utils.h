@@ -1,27 +1,24 @@
-//
-// Created by abhishek on 12/7/18.
-//
+/*
+ * utils.h
+ *
+ *  Created on: 15-Jul-2018
+ *  Author: Abhishek Mane <https://abhishek-mane.github.io>
+ */
 
-#ifndef DATA_STRUCTURES_UTILS_H
-#define DATA_STRUCTURES_UTILS_H
+#ifndef LIB_UTILS_H_
+#define LIB_UTILS_H_
 
 typedef enum _bool {
-    false = 0,
-    true = 1
+	False = 0, True = 1
 } Bool;
 
-typedef enum _direction {
-    left = 0,
-    right = 1,
-    head = 2,
-    tail = 4,
-    up = 5,
-    down = 6
-} Direction;
-
 typedef struct _array {
-    int *ptr;
-    int length;
+	int *ptr;
+	int length;
 } Array;
 
-#endif //DATA_STRUCTURES_UTILS_H
+typedef enum _direction {
+	left = 0, right = 1, up = 2, down = 3
+} Direction;
+
+#endif /* LIB_UTILS_H_ */

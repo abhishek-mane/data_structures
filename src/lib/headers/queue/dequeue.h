@@ -6,10 +6,11 @@
 #define DATA_STRUCTURES_DEQUEUE_H
 
 #include <stdio.h>
-#include "../../linkedlist/headers/doubly_list.h"
+
+#include "../linkedlist/doubly.h"
 
 typedef struct _dequeue {
-    DoublyLinkedList *queue;
+	DoublyLinkedList *queue;
 } Dequeue;
 
 Dequeue *dequeue_create();
