@@ -35,10 +35,19 @@ int main() {
 	list->insert(list, 12);
 	list->insert(list, 23);
 	list->insert(list, 34);
-	list->insert(list, 45);
-	list->insert(list, 56);
 
 	display(list->get_array(list));
+	printf("\n");
+
+	list->delete_head(list);
+
+	display(list->get_array(list));
+	printf("\n");
+
+	list->delete_head(list);
+
+	display(list->get_array(list));
+	printf("\n");
 
 	return 0;
 }
