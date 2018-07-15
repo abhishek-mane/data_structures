@@ -3,6 +3,7 @@ project(data_structures C)
 
 set(CMAKE_C_STANDARD 99)
 
+# ============= headers/includes =============
 include_directories(src/includes)
 
 add_executable(
@@ -12,10 +13,7 @@ add_executable(
 	# Main
 	src/main.c
 	
-	# ============= lib =============
-	# +-----------------------------+
-	# | sources						|
-	# +-----------------------------+
+	# ============= sources =============
 	src/sources/linkedlist/singly.c
 	src/sources/linkedlist/doubly.c
 	src/sources/linkedlist/singly_circular.c
