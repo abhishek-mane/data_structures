@@ -7,14 +7,15 @@ set(CMAKE_C_STANDARD 99)
 include_directories(src/includes)
 
 add_executable(
-	# Project
-	data_structures
-	
-	# Main
-	src/main.c
-	
-	# ============= Sources =============
-	src/sources/linkedlist/singly.c
-	src/sources/linkedlist/doubly.c
-	src/sources/linkedlist/singly_circular.c
+        # Project
+        data_structures
+
+        # Main
+        src/main.c
+
+        # ============= Sources =============
+        src/sources/linkedlist/singly.c
+        src/sources/linkedlist/doubly.c
+        src/sources/linkedlist/singly_circular.c
+        src/sources/stack/stack.c
 )

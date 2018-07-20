@@ -8,14 +8,15 @@
 
 #include <stdio.h>
 #include <utils.h>
-#include <linkedlist/singly_circular.h>
-#include <linkedlist/doubly.h>
+//#include <linkedlist/singly_circular.h>
+//#include <linkedlist/doubly.h>
+#include <stack/stack.h>
 
 void display(Array *arr) {
-	printf("List => ");
-	for (int i = 0; i < arr->length; ++i) {
-		printf("%d, ", arr->ptr[i]);
-	}
+    printf("List => ");
+    for (int i = 0; i < arr->length; ++i) {
+        printf("%d, ", arr->ptr[i]);
+    }
 }
 
 int main() {
@@ -30,15 +31,28 @@ int main() {
 //
 //	display(list->get_array(list));
 
-	DoublyLinkedList *list = create_doubly_linked_list();
+//	DoublyLinkedList *list = create_doubly_linked_list();
+//
+//	list->insert(list, 12);
+//	list->insert(list, 23);
+//	list->insert(list, 34);
+//	list->insert(list, 45);
+//	list->insert(list, 56);
+//
+//	display(list->get_array(list));
 
-	list->insert(list, 12);
-	list->insert(list, 23);
-	list->insert(list, 34);
-	list->insert(list, 45);
-	list->insert(list, 56);
+    printf("Hello");
 
-	display(list->get_array(list));
+    Stack *stack = create_stack(5);
 
-	return 0;
+    stack->push(stack, 1);
+    stack->push(stack, 2);
+    stack->push(stack, 3);
+    stack->push(stack, 4);
+    stack->push(stack, 5);
+    stack->push(stack, 6);
+
+    display(stack->get_array(stack));
+
+    return 0;
 }
