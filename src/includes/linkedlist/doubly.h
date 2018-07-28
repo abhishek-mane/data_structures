@@ -20,17 +20,29 @@ typedef struct _doubly_ll_node {
 typedef struct _doubly_linked_list {
 
 	// ========== vars ==========
+
 	DoublyLinkedListNode *head;
 	DoublyLinkedListNode *tail;
 	int length;
 
 	// ========== methods ==========
+
 	DoublyLinkedListNode* (*create_node)(int);
+
 	Bool (*is_empty)(struct _doubly_linked_list *);
-	void (*insert)(struct _doubly_linked_list *, int);
+
+	DoublyLinkedListNode* (*insert)(struct _doubly_linked_list *, int);
+
+	void (*delete_head)(struct _doubly_linked_list *);
+
+	void (*delete_tail)(struct _doubly_linked_list *);
+
+	void (*delete_node)(struct _doubly_linked_list *, DoublyLinkedListNode *);
+
 	Array* (*get_array)(struct _doubly_linked_list *);
 
 } DoublyLinkedList;
 
 DoublyLinkedList *create_doubly_linked_list();
+
 #endif /* INCLUDES_LINKEDLIST_DOUBLY_H_ */
