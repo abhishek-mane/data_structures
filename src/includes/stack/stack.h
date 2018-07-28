@@ -18,7 +18,7 @@ typedef struct _stack_node {
 typedef struct _stack {
 
     // ========== vars ==========
-    StackNode *top;
+    StackNode *head;
     int length;
     int size;
 
@@ -32,6 +32,10 @@ typedef struct _stack {
     void (*push)(struct _stack *, int);
 
     Array *(*get_array)(struct _stack *);
+
+    int (*top)(struct _stack *);
+
+    int (*pop)(struct _stack *);
 
 } Stack;
 

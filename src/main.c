@@ -17,6 +17,8 @@ void display(Array *arr) {
     for (int i = 0; i < arr->length; ++i) {
         printf("%d, ", arr->ptr[i]);
     }
+
+    printf("\n");
 }
 
 int main() {
@@ -41,8 +43,6 @@ int main() {
 //
 //	display(list->get_array(list));
 
-    printf("Hello");
-
     Stack *stack = create_stack(5);
 
     stack->push(stack, 1);
@@ -52,6 +52,24 @@ int main() {
     stack->push(stack, 5);
     stack->push(stack, 6);
 
+    display(stack->get_array(stack));
+
+    printf("Popping => %d\n", stack->pop(stack));
+    display(stack->get_array(stack));
+
+    printf("Popping => %d\n", stack->pop(stack));
+    display(stack->get_array(stack));
+
+    printf("Popping => %d\n", stack->pop(stack));
+    display(stack->get_array(stack));
+
+    printf("Popping => %d\n", stack->pop(stack));
+    display(stack->get_array(stack));
+
+    printf("Popping => %d\n", stack->pop(stack));
+    display(stack->get_array(stack));
+
+    printf("Popping => %d\n", stack->pop(stack));
     display(stack->get_array(stack));
 
     return 0;
