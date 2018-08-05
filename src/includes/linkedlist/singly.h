@@ -13,26 +13,52 @@
 #include <utils.h>
 
 typedef struct _node {
-	int data;
-	struct _node *next;
-} Node;
+    int data;
+    struct _node *next;
+} SinglyLinkedListNode;
 
-typedef struct _linked_list {
-	Node *head;
-	Node *tail;
-	int length;
+typedef struct _singly_linked_list {
+
+    // ========== vars ==========
+    SinglyLinkedListNode *head;
+    SinglyLinkedListNode *tail;
+    int length;
+
+    // ========== methods ==========
+    SinglyLinkedListNode *(*create_node)(int);
+
+    void (*insert_at_head)(struct _singly_linked_list *, int);
+
+    void (*insert_at_tail)(struct _singly_linked_list *, int);
+
+    void (*insert)(struct _singly_linked_list *, int);
+
+    Bool (*is_empty)(struct _singly_linked_list *);
+
+    Array *(*get_array)(struct _singly_linked_list *);
+
+    void (*remove)(struct _singly_linked_list *, int);
+
+    void (*remove_head)(struct _singly_linked_list *);
+
+    void (*remove_tail)(struct _singly_linked_list *);
+
+    void (*reverse)(struct _singly_linked_list *);
+
+    void (*sort)(struct _singly_linked_list *);
+
+    void (*destroy)(struct _singly_linked_list *);
+
+    struct _singly_linked_list *(*copy)(struct _singly_linked_list *);
+
+    struct _singly_linked_list *(*set_intersection)(struct _singly_linked_list *, struct _singly_linked_list *);
+
+    struct _singly_linked_list *(*set_union)(struct _singly_linked_list *, struct _singly_linked_list *);
+
+    void (*remove_duplicates)(struct _singly_linked_list *);
+
 } SinglyLinkedList;
 
-Node *create_singly_ll_node(int data);
-
-SinglyLinkedList *create_singly_ll();
-
-void singly_ll_insert_node_at_head(SinglyLinkedList *, int);
-
-void singly_ll_insert_node_at_tail(SinglyLinkedList *, int);
-
-void singly_ll_insert_node(SinglyLinkedList *, int);
-
-Array *singly_ll_get_array(SinglyLinkedList *);
+SinglyLinkedList *create_singly_linked_list();
 
 #endif /* LIB_HEADERS_LINKEDLIST_SINGLY_H_ */
