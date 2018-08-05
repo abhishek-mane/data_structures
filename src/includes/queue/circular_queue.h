@@ -31,6 +31,8 @@ typedef struct _circular_queue {
 
     Bool (*is_full)(struct _circular_queue *);
 
+    void (*display)(struct _circular_queue *);
+
 } CircularQueue;
 
 CircularQueue *create_circular_queue(unsigned int);

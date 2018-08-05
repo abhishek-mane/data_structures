@@ -301,52 +301,29 @@ void stack_ll() {
 
 void circular_queue() {
 
-    void display(CircularQueue *q) {
-
-        if (q->is_empty(q)) {
-            printf("\n\nQueue is empty");
-            return;
-        }
-
-        printf("\n\n+----------------------------------------+");
-        printf("\nQueue => ");
-
-        for (int i = (q->front), len = q->length; len != 0; i = (i + 1) % (q->size), --len) {
-            printf("%d, ", (q->ptr)[i]);
-        }
-
-        printf("\nlength => %d", q->length);
-        printf("\nsize => %d", q->size);
-        printf("\nfront => %d", (q->ptr)[q->front]);
-        printf("\nrear => %d", (q->ptr)[q->rear]);
-
-        printf("\n+----------------------------------------+");
-
-    }
-
     CircularQueue *q = create_circular_queue(5);
-    display(q);
+    q->display(q);
 
     q->insert(q, 12);
     q->insert(q, 23);
     q->insert(q, 34);
-    display(q);
+    q->display(q);
 
     printf("\nDeleted = %d", q->delete(q));
-    display(q);
+    q->display(q);
 
     q->insert(q, 98);
     q->insert(q, 87);
     q->insert(q, 76);
-    display(q);
+    q->display(q);
 
     printf("\nDeleted = %d", q->delete(q));
     printf("\nDeleted = %d", q->delete(q));
-    display(q);
+    q->display(q);
 
     q->insert(q, 123);
     q->insert(q, 432);
-    display(q);
+    q->display(q);
 
     q->insert(q, 889);
 

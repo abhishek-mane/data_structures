@@ -59,6 +59,24 @@ int circular_queue_delete(CircularQueue *q) {
     return tmp;
 }
 
+void circular_queue_display(CircularQueue *q) {
+
+    printf("\n\n+---------------------------------+");
+    printf("\n| Elements\t\t=> ");
+
+    for (int i = (q->front), len = q->length; len != 0; i = (i + 1) % (q->size), --len) {
+        printf("%d, ", (q->ptr)[i]);
+    }
+
+    printf("\n| Length\t\t=> %d", q->length);
+    printf("\n| Size\t\t\t=> %d", q->size);
+    printf("\n| Front Element => %d", (q->ptr)[q->front]);
+    printf("\n| Rear Element\t=> %d", (q->ptr)[q->rear]);
+
+    printf("\n+---------------------------------+");
+
+}
+
 CircularQueue *create_circular_queue(unsigned int size) {
 
     // allocate
@@ -77,5 +95,5 @@ CircularQueue *create_circular_queue(unsigned int size) {
     q->insert = &circular_queue_insert;
     q->delete = &circular_queue_delete;
     q->peek = &circular_queue_peek;
-
+    q->display = &circular_queue_display;
 }
