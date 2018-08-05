@@ -19,5 +19,7 @@ add_executable(
         src/sources/linkedlist/singly.c
         src/sources/linkedlist/doubly.c
         src/sources/linkedlist/singly_circular.c
-        src/sources/stack/stack.c
+        src/sources/trees/binary_search_tree.c
+        src/sources/stack/stack_array.c
+        src/sources/stack/stack_ll.c
 )
