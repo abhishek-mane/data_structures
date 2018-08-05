@@ -13,6 +13,7 @@
 #include <trees/binary_search_tree.h>
 #include <stack/stack_array.h>
 #include <stack/stack_ll.h>
+#include <queue/circular_queue.h>
 
 void display_list(SinglyLinkedList *list) {
 
@@ -298,6 +299,59 @@ void stack_ll() {
     stack->push(stack, 21);
 }
 
+void circular_queue() {
+
+    void display(CircularQueue *q) {
+
+        if (q->is_empty(q)) {
+            printf("\n\nQueue is empty");
+            return;
+        }
+
+        printf("\n\n+----------------------------------------+");
+        printf("\nQueue => ");
+
+        for (int i = (q->front), len = q->length; len != 0; i = (i + 1) % (q->size), --len) {
+            printf("%d, ", (q->ptr)[i]);
+        }
+
+        printf("\nlength => %d", q->length);
+        printf("\nsize => %d", q->size);
+        printf("\nfront => %d", (q->ptr)[q->front]);
+        printf("\nrear => %d", (q->ptr)[q->rear]);
+
+        printf("\n+----------------------------------------+");
+
+    }
+
+    CircularQueue *q = create_circular_queue(5);
+    display(q);
+
+    q->insert(q, 12);
+    q->insert(q, 23);
+    q->insert(q, 34);
+    display(q);
+
+    printf("\nDeleted = %d", q->delete(q));
+    display(q);
+
+    q->insert(q, 98);
+    q->insert(q, 87);
+    q->insert(q, 76);
+    display(q);
+
+    printf("\nDeleted = %d", q->delete(q));
+    printf("\nDeleted = %d", q->delete(q));
+    display(q);
+
+    q->insert(q, 123);
+    q->insert(q, 432);
+    display(q);
+
+    q->insert(q, 889);
+
+}
+
 int main() {
 
 //    singly_linked_list_sorting();
@@ -307,6 +361,7 @@ int main() {
 //    binary_search_tree_basics();
 //    stack_arrays();
 //    stack_ll();
+    circular_queue();
     return 0;
 
 }

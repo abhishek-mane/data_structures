@@ -22,4 +22,4 @@ add_executable(
         src/sources/trees/binary_search_tree.c
         src/sources/stack/stack_array.c
         src/sources/stack/stack_ll.c
-)
+        src/includes/queue/circular_queue.h src/sources/queue/circular_queue.c)
